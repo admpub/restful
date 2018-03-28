@@ -1,11 +1,20 @@
 package rest
 
 import (
-	"flag"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
 )
+
+/*
+func init() {
+	flag.BoolVar(&mockUpEnv, "mock", false,
+		"Use 'mock' flag to tell package rest that you would like to use mockups.")
+
+	flag.Parse()
+	startMockupServ()
+}
+*/
 
 var mockUpEnv bool
 var mockMap = make(map[string]*Mock)
@@ -82,14 +91,6 @@ func startMockupServ() {
 		}
 
 	}
-}
-
-func init() {
-	flag.BoolVar(&mockUpEnv, "mock", false,
-		"Use 'mock' flag to tell package rest that you would like to use mockups.")
-
-	flag.Parse()
-	startMockupServ()
 }
 
 // AddMockups ...
