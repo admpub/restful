@@ -216,7 +216,7 @@ func (rb *RequestBuilder) setParams(client *http.Client, req *http.Request, cach
 		if rb.UserAgent != "" {
 			return rb.UserAgent
 		}
-		return "github.com/go-loco/restful"
+		return "github.com/admpub/restful"
 	}())
 
 	//Encoding
